@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-input {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  margin: 10px 0;
+  input {
+    flex: 1;
+    padding: 5px;
   }
-  to {
-    transform: rotate(360deg);
+  button {
+    padding: 5px 10px;
+  }
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f5f5f5;
+    input {
+      flex: 1;
+      padding: 5px;
+      border: none;
+    }
+    .task-actions {
+      button {
+        margin-left: 5px;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* App.css */
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Landing Page */
+.landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background: linear-gradient(to right, #007bff, #4caf50); */
+  color: #000;
+}
+
+.landing-content {
+  max-width: 800px;
+  text-align: center;
+  padding: 20px;
+}
+
+.landing-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.login-button,
+.register-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  margin: 0 10px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.login-button {
+  background-color: #007bff;
+}
+
+.register-button {
+  background-color: #007bff;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  .landing-content {
+    max-width: 100%;
+    padding: 10px;
+  }
+  .login-button,
+  .register-button {
+    font-size: 14px;
+  }
+}
+
+/* Small screens (e.g., mobile) */
+@media screen and (max-width: 480px) {
+  .landing-content {
+    padding: 10px;
+  }
+  .login-button,
+  .register-button {
+    font-size: 12px;
+    padding: 10px 20px;
   }
 }
